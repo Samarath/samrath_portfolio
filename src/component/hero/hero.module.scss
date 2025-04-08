@@ -1,0 +1,252 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  position: relative;
+  overflow: hidden;
+
+  .iconCarousel {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconSlide {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 12s linear infinite;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    5% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    20% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    25% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at top right,
+      rgba(var(--primary-rgb), 0.1),
+      transparent 60%
+    );
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at bottom left,
+      rgba(var(--secondary-rgb), 0.1),
+      transparent 60%
+    );
+    z-index: -1;
+  }
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+.textContent {
+  flex: 1;
+  max-width: 600px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+}
+
+.greeting {
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 500px;
+
+  @media (max-width: 900px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+
+  @media (max-width: 900px) {
+    max-width: 300px;
+  }
+}
+
+.imagePaper {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.heroImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 900px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: white;
+
+  h3 {
+    font-size: 8rem;
+    font-weight: 700;
+  }
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}

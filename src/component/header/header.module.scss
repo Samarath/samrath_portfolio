@@ -1,0 +1,64 @@
+.appBar {
+  transition: all 0.3s ease;
+  background-color: var(--background);
+
+  &.scrolled {
+    background-color: var(--paper);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.navItems {
+  display: flex;
+  gap: 8px;
+}
+
+.navButton {
+  position: relative;
+  font-weight: 500;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 70%;
+  }
+}
+
+.drawerPaper {
+  width: 250px;
+  background-color: var(--paper);
+}
+
+.drawerItem {
+  padding: 12px 24px;
+
+  &:hover {
+    background-color: rgba(var(--primary-rgb), 0.1);
+  }
+}

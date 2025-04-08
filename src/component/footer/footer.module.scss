@@ -1,0 +1,125 @@
+.footer {
+  background-color: var(--background);
+  padding: 4rem 0 2rem;
+  position: relative;
+  border-top: 1px solid var(--divider);
+}
+
+.scrollTop {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollButton {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+  }
+}
+
+.footerContent {
+  margin-bottom: 2rem;
+}
+
+.footerTitle {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary);
+  }
+}
+
+.footerText {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialIcon {
+  color: var(--text-primary);
+  background-color: rgba(var(--primary-rgb), 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+    background-color: var(--primary);
+    transform: translateY(-3px);
+  }
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footerLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    color: var(--primary);
+    transform: translateX(5px);
+    text-decoration: none;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactItem {
+  color: var(--text-secondary);
+
+  strong {
+    color: var(--text-primary);
+    margin-right: 0.5rem;
+  }
+}
+
+.divider {
+  margin: 2rem 0;
+  background-color: var(--divider);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+.copyright,
+.credits {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
