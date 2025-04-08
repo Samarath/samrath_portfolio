@@ -118,7 +118,6 @@ export default function Header() {
                 <List>
                   {navItems.map((item) => (
                     <ListItem
-                      button
                       key={item.label}
                       onClick={() => handleNavClick(item.href)}
                       className={styles.drawerItem}

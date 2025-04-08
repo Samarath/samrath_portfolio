@@ -143,7 +143,7 @@ export default function Contact() {
         </Typography>
 
         <Grid container spacing={4}>
-          <Grid item xs={12} md={5}>
+          <Grid>
             <Box className={styles.contactInfo}>
               <Typography
                 variant="h5"
@@ -155,9 +155,9 @@ export default function Contact() {
 
               <Typography variant="body1" className={styles.contactText}>
                 Feel free to reach out to me for any questions, project
-                inquiries, or just to say hello. I'm always open to discussing
-                new projects, creative ideas, or opportunities to be part of
-                your vision.
+                inquiries, or just to say hello. I&apos;m always open to
+                discussing new projects, creative ideas, or opportunities to be
+                part of your vision.
               </Typography>
 
               <Box className={styles.contactDetails}>
@@ -239,7 +239,7 @@ export default function Contact() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          <Grid>
             <Paper elevation={3} className={styles.formContainer}>
               <Typography
                 variant="h5"
@@ -251,7 +251,7 @@ export default function Contact() {
 
               <form onSubmit={handleSubmit} className={styles.contactForm}>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid>
                     <TextField
                       fullWidth
                       label="Your Name"
@@ -265,7 +265,7 @@ export default function Contact() {
                     />
                   </Grid>
 
-                  <Grid item xs={12} sm={6}>
+                  <Grid>
                     <TextField
                       fullWidth
                       label="Your Email"
@@ -280,7 +280,7 @@ export default function Contact() {
                     />
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid>
                     <TextField
                       fullWidth
                       label="Subject"
@@ -294,7 +294,7 @@ export default function Contact() {
                     />
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid>
                     <TextField
                       fullWidth
                       label="Your Message"
@@ -310,7 +310,7 @@ export default function Contact() {
                     />
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid>
                     <Button
                       type="submit"
                       variant="contained"

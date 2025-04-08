@@ -10,7 +10,7 @@ import {
   TimelineDot,
   TimelineOppositeContent,
 } from "@mui/lab";
-import { Work, School } from "@mui/icons-material";
+import { Work } from "@mui/icons-material";
 import styles from "./experience.module.scss";
 
 export default function Experience() {

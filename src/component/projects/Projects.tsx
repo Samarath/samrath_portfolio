@@ -198,6 +198,7 @@ export default function Projects() {
             <DialogContent dividers>
               <Grid container spacing={3}>
                 <Grid>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={selectedProject.image || "/placeholder.svg"}
                     alt={selectedProject.title}
